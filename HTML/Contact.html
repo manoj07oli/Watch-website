@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Development/Ext_JS/footer.js"> <!-- External Javascript file for footer -->
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+      
+
+        body {
+            margin: 0px;
+            background-color: #2e2a2a;
+            color: rgb(161, 185, 24);
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+        .header {
+            margin: 0;
+            font-size: 55px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+        }
+        .Form-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1000px;
+            margin-top: -120px;
+            height: auto;
+        }
+        .illustration {
+          width: 64%;
+          margin-top: -100px;
+          position: relative;
+          right: 21%;
+        }
+
+        .illustration img {
+            width: 100%;
+            height: auto;
+        }
+        
+        
+        .form {
+            width: 50%;
+            background-color: #0e0b0b;
+            color: #fff;
+            padding: 2px;
+            height: 700px;
+            text-align: left;
+            border-radius: 10px;
+            background: transparent;
+            font-size: 20px;
+            margin-top: 110px;
+        }
+
+        .form input, .form textarea, .form button {    /* input, textarea and button styling */
+          width: 100%;
+            width: 100%;
+            margin: 0 0 20px;        
+            padding: 20px 5px 0px;
+            border-bottom: 1px solid rgba(246, 191, 45, 0.5);
+            font-size: 16px;
+            border: none;
+            color: hsla(0, 0%, 100%, 0.9);
+            border-radius: 5px;
+            outline: 0;
+            background-color: transparent;
+            box-shadow: none;
+            transition: all 0.3s;
+        }
+        .form input[name="Full Name"] {
+            border-bottom: 2px solid rgba(240, 238, 233, 0.5);
+            max-width: 160px;
+        }
+        .form input, .form textarea {
+            border-bottom: 2px solid rgba(236, 235, 232, 0.5);
+        }
+        .form input::placeholder, .form textarea::placeholder {  /* placeholder styling */
+            transition: all 0.3s;
+            
+            
+            
+            
+        }
+        .form input[name="Full Name"] {
+            border-bottom: 2px solid rgba(240, 238, 233, 0.5);
+            max-width: 160px; ;
+        }
+        .form input, .form textarea {
+            border-bottom: 2px solid rgba(236, 235, 232, 0.5)
+        }
+        .form input::placeholder, .form textarea::placeholder {
+            color: hsla(60, 100%, 99%, 0.9);
+           
+
+            
+        }
+        .form input:focus, .form textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px rgba(238, 237, 236, 0.5);
+}
+
+        .form button {
+            background-color: #f8f8f8;
+            color: black;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .form button:hover {
+            background-color: #e6b800;
+        }
+       
+        .contact-us-section {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(252, 249, 249);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .contact-us-text {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .breadcrumb {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 14px;
+            color: rgba(250, 250, 250, 0.8);
+        }
+
+        .breadcrumb a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+       
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .footer h1 {
+           margin: 0px;
+        }
+   
+        .main-content {
+    display: flex;
+    
+    
+    height: 180px;
+    background-color: #1f1e1e;
+    
+  }
+.left {
+  display: flex;
+  flex-direction: row;
+  margin: 80px;
+  width: 150px;
+  height: 10px;
+ 
+  
+}
+.left h2 {
+  margin-top: -40px;
+  margin-right:-50px;
+  color: rgb(250, 247, 247);
+  margin-left: 20px;
+}
+.left ul {
+  margin-top: -10px;
+  margin-left: -0px;
+  color: #e6dddd;
+}
+.left ul li {
+    margin-left: -60px;
+    text-align: left;
+    color: white;
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.left ul a {
+  color: #e6dddd;
+  margin-left: -0px;
+  
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  margin: 80px;
+  width: 150px;
+  height: 10px;
+}
+.center h2 {
+  margin-top: -40px;
+  margin-right:30px;
+  color: rgb(249, 241, 241);
+  margin-left: 20px;
+}
+.center ul {
+  margin-top: -10px;
+  margin-left: -90px;
+  color: #e6dddd;
+}
+.center ul li {
+  margin-left: -35px;
+    text-align: left;
+    color: white;
+    margin-right: 10px;
+}
+.center ul a {
+  color: #e6dddd;
+  text-decoration: none;
+}
+.news {              /* news styling for footer */
+  display: flex;
+  flex-direction: row;
+  margin: 80px;
+  width: 550px;
+  height: 10px;
+}
+.news h2 {
+  margin-top: -40px;
+  margin-right:-210px;
+  color: rgb(249, 241, 241);
+  margin-left: 20px;
+}
+.news ul {
+  margin-top: -10px;
+  margin-left: -90px;
+  color: #e6dddd;
+}
+.news ul a {
+  color: #e6dddd;
+  text-decoration: none;
+}
+.news ul li {
+  display: flex;
+  align-items: center;
+  margin-left: -35px;
+    text-align: left;
+    color: white;
+    margin-right: 10px;
+}
+
+.news ul li input {
+  margin-right: 1px;
+  margin-top: 15px;
+  width: 230px;
+  height: 30px;
+  
+}
+
+.news ul li button {
+  margin-top: 10px;
+  margin-top: -28px;
+  margin-left: 240px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: 200;
+  padding: 4px 9px;
+  
+  transition: background-color 0.3s;
+  text-decoration: none;
+  margin-right: 30px;
+  
+}
+.right {
+  display: flex;
+  flex-direction: row;
+  margin: 80px;
+  width: 190px;
+  height: 10px;
+}
+.right h2 {
+  margin-top: -40px;
+  margin-right:-10px;
+  color: rgb(249, 241, 241);
+  margin-left: 20px;
+}
+.right ul {
+  margin-top: -10px;
+  margin-left: -90px;
+  color: #e6dddd;
+}
+.right ul li {
+  margin-left: -35px;
+    text-align: left;
+    color: white;
+    margin-right: 10px;
+}
+.right ul a {
+  color: #e6dddd;
+  text-decoration: none;
+}
+.hr {
+  height: 40px;
+}
+
+.hr p {
+  height: 40px;
+  text-align: center;
+  margin-top: 1px;
+    color: #e6dddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+    
+
+
+</style>
+<body>
+    
+    <div class="contact-us-section"> <!--Small Navigation between Home annd Contact Us-->
+        <div class="breadcrumb">     <!-- for the simple navigaton class-->
+            <a href="/Index.html">Home</a> </a> / <a href="./Contact.html">Contact us</a>
+        </div>
+        <div class="contact-us-text">CONTACT US</div>    <!--Contact Us text with class-->
+    </div>
+    
+    <div class="container">
+        
+        
+
+       
+        <div class="Form-section">  <!--It is the complete contact form section-->
+          
+            <div class="illustration"> 
+                <img src='/Development/IMAGES/logo_1.png' alt="illustration"><!--Logo for Contact Us form-->
+        </div>
+            <table>
+            <div class="form"> <!--Contact Us Form-->
+                <p>For More Information Please Fill in the form below:</p>
+                <form name="messageForm" onsubmit=" validateForm()">
+                <input type="text" name="fullname" placeholder="Full Name" >
+                
+                <input type="tel" name="phoneNumber" placeholder="Phone Number">
+                <input type="email" name="emailAddress" placeholder="Email Address" >
+                <input type="text" name="college" placeholder="College / Institution / Organization">
+                <input type="text" name="grade" placeholder="Grade">
+                <textarea placeholder="Message" rows="4"></textarea>
+                <button type="submit">Send</button>
+                </form>
+                </div>
+                </table>
+            </div>
+        </div>
+        </div>
+  </div>
+
+<!--Internal Javascript for footer-->
+<script>
+function validateForm(){ 
+  var fname= document.forms["messageForm"]["fullname"].value;
+  var phoneNumber= document.forms["messageForm"]["phoneNumber"].value;
+  var emailAddress= document.forms["messageForm"]["emailAddress"].value;
+  var college= document.forms["messageForm"]["college"].value;
+  var grade= document.forms["messageForm"]["grade"].value;
+
+  if (fname == "" || phoneNumber == "" ||  emailAddress == "" || college== "" || grade== "") {
+      alert("Please fill in all fields");
+     
+  }
+  else {
+      alert("Form submitted successfully");
+     
+  }
+}
+</script>
+
+
+  <script src="/Development/Ext_JS/footer.js"></script>
+ 
+
+
+<hr>
+<div class="main-content"> <!--Main footer content as included in all pages-->
+              
+    <div class="left">
+      <h2>Sites Links</h2>
+      <ul>
+        <li><a href="/Index.html">Home</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./product.html">Products</a></li>
+        <li><a href="./research.html">Research</a></li>
+        <li><a href="./About.html">About Us</a></li>
+      </ul>                       
+    </div>
+
+    <div class="center">
+      <h2>Assitance</h2>
+      <ul>
+        <li><a href="./About.html">Portfolio</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./product.html">Best Collections</a></li>
+        
+                            
+    </div>
+
+    <div class="news">
+      <h2>Subscribe To Our Newsletter!</h2>
+      <form name="newsForm" onsubmit="displaypopup(event)">
+      <ul>
+        <li><input type="text" placeholder="Enter Your Email"></li>
+        <li><button>Subscribe</button></li>
+
+</form>
+    </div>
+    <div class="right"> 
+      <h2>Follow Us On</h2>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  
+
+  </div>
+</div>
+<div class="hr">
+<hr>
+<p style="background-color: #2b2828;">© 2021 Aeternam Watches. All Rights Reserved.</p>
+</div>
+  
+</div>
+  
+</body>
+
+</html>

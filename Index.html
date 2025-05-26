@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./Development/Ext_css/Index.css"> <!--This is the link for External CSS of Home page-->
+    
+    
+</head>
+
+
+<!--This is the header section of the home page mainly including navigation bar-->
+<body>
+   
+    <section>
+    <nav>
+    <header class="header">   
+        <div class="navbar"> 
+    
+            <ul> <!--Here the logo is desgined to be a navigation bar of homepage-->
+            <li><a href="./Development/HTML/blog.html"><B>Blog</B></a></li>
+            <li><a href="./Development/HTML/product.html"><B>Products</B></a></li>
+            <li><a href="./Development/HTML/research.html"><B>Research</B></a></li>
+            <li><a href="./Development/HTML/About.html"><B>About Us</B></a></li>
+            </ul>
+        </div>
+
+        <div class="logo">
+          <a href="./Index.html"><!--Used for navigating to the home page-->
+                <img src="./Development/IMAGES/logo_1(1)(1).png" alt="logo"> <!--inserting the logo image.-->
+            </div>
+          </a>
+         <div class="contact-btn">
+         
+            <a href="./Development/HTML/Contact.html" class="btn">Get In Touch</a>
+        
+         </div>
+    </nav>
+    </header>
+
+
+        <div class="Overlay"><!--Layering the brandname above the mp4 video-->
+         <h1>AETERNAM</h1>
+        <p>Eternal Style, Timeless Design</p>
+        <div id="real-time-display"></div> <!-- Real-time display added here -->
+        </div>
+
+
+        <script>/**This is the JS code for the real time display**/
+          function updateTime() {
+              const now = new Date();
+              const hours = String(now.getHours()).padStart(2, '0');
+              const minutes = String(now.getMinutes()).padStart(2, '0');
+              const seconds = String(now.getSeconds()).padStart(2, '0');
+              const timeString = `${hours}:${minutes}:${seconds}`;
+              document.getElementById('real-time-display').textContent = timeString;
+          }
+      
+          setInterval(updateTime, 1000);
+          updateTime(); // Initial call to display the time immediately
+      </script>
+      
+      <style>
+          #real-time-display {
+              font-size: 24px;
+              font-family: Arial, sans-serif;
+              color: #ffffff;
+              margin-top: 10px;
+          }
+      </style>
+        
+
+    </section> 
+     <video autoplay muted loop style="width: 100%; height: 100%;"> <!--Used for inserting background video-->
+                <source src="./Development/IMAGES/finalmainpagee.mp4" type="video/mp4">
+    </video>
+    
+    <section  class="watchess" id="watches1">
+      <div class="art"> <!--Overlay Text class on video background-->
+          <div class="overlay_about">  
+              <h2>Art Of Horology</h2><br>
+              <p>At Aeternam Watches, We blend precision craftmanship with timeless Design.
+                 Here, we craft every watches with accurate and precise attention to every detail possible.
+                  By using innovative techniques, finest materials and meticulous care, we ensure that all of our chronographs
+                   and timepiece symbolizes luxury and timeless elegance.</p>  
+             
+             
+              <div class="about_us">
+              <br>
+              <a href="./Development/HTML/blog.html" class="click">Know More</a>
+              </div>
+          </div>
+
+      
+       <video autoplay muted loop style="width: 100%;">
+              <source src="./Development/IMAGES/aboutt.mp4" type="video/mp4">'
+          </video>
+    
+              
+      
+  </section>
+
+
+  
+    
+    <section> <!--Product section which is linked to product page-->
+        <div class="elegance">
+        <h2>Our Elegances</h2>
+        <div class="novelties-container">
+
+          <div class="novelty-item">
+            <a href="./Development/HTML/Watch-product/watch2.html"> <img src="./Development/IMAGES/black-Photoroom.png" alt="watchfront" class="primary"></a>
+            <p class="novelty-category">AE8 Black Series</p>
+          </div>
+
+          <div class="novelty-item">
+            <a href="./Development/HTML/Watch-product/watch5.html"><img src="./Development/IMAGES/blue-Photoroom.png" alt="watchfront" class="secondary"></a>
+            <p class="novelty-category">AE8 Blue Series</p>
+          </div>
+
+          <div class="novelty-item">
+            <a href="./Development/HTML/Watch-product/watch3.html"><img src="./Development/IMAGES/brown-Photoroom.png" alt="watchfront" class="tertiary"></a>
+            <p class="novelty-category">AE8 Brown Series</p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="about-section" style="display: flex;flex-direction: column;padding-right: 515px; align-items: start;">
+        <div class="about-container">
+          <h2>Who We Are</h2>
+          <p><div class="about-content">
+            Our team consists of four dedicated individuals that work closely together and each provide
+             distinctive skills and knowledge. We work together cooperatively in achieving our goal of making
+              sure that every aspect of our company and website has purpose and influence. We specialize on
+               developing experiences that connect with our audience and represent our principles because we
+                have a mutual interest for perfection.
+          </p></div>
+        </div>
+    
+        <div class="about">
+          <br>
+          <a href="./Development/HTML/About.html" class="click">Learn More About Us </a>
+          </div>
+      </section>
+    
+      <style>   /**Internal css for About us secton**/
+    
+    .about-section {
+      background-color: #f4f4f4;
+      padding: 40px 20px;
+      text-align: center;
+      background-image: url(./Development/IMAGES/hand.jpg);
+      background-size: cover;
+    }
+    
+    .about-section h2 {
+      font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff7f7;
+    position: relative;
+    left: -35%;
+    top: 51px;
+     
+    }
+
+    .about-content{
+    font-size: 18.5px;
+    padding: 45px;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    flex-direction: column;
+    top: 5px;
+    text-shadow: #2b2828;
+
+    }
+    
+    .about-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ffffff;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about .click {    
+    text-decoration: none;
+    color: #096644;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    left: 23%;
+    bottom: 36px;
+    border-radius: 16px;
+    background-color: aliceblue;
+    padding: 5px;
+    box-shadow: 0 3px 4px;
+    }
+
+    .about .click:hover{
+      color:black;
+    }
+    
+    
+      </style>
+
+
+
+<section id="beyond-the-hourglass"> <!--The Research section of the index page uses image slider-->
+  <div class="slider">
+      <div class="slide active" style="background-image: url('./Development/IMAGES/hourglass.jpg');"></div>
+      <div class="slide" style="background-image: url('./Development/IMAGES/plane.jpg');"></div>
+      <div class="slide" style="background-image: url('./Development/IMAGES/forestwatch.jpg');"></div>
+  </div>
+
+  <div class="content">
+      <h2>Beyond The Hourglass</h2>
+      <p>Driven by a passion for excellence and a relentless pursuit of perfection, 
+        we aim to create timepieces that resonate with the hearts and minds of our customers.
+         Whether it’s a bold statement piece or an understated classic, our watches are designed to accompany 
+         life’s moments, big and small, while standing the test of time.<br><br> 
+         
+         Join us on this extraordinary journey as we redefine the future of horology—one where every tick 
+         of the clock reflects the enduring spirit of innovation, artistry, and craftsmanship.
+          Aeternam Watches: where time becomes timeless.</p> <br><br>
+
+          <a href="./Development/HTML/research.html" class="research-button">View Research Index</a>
+        </div>
+   </div>
+  <script src="./Development/Ext_JS/Slider.js"></script> <!--External JS code for the image slider-->
+</section>
+
+
+          
+   <footer class="footer"> <!--Home page footer-->
+            <div class="footerc">
+              
+                <div class="main-footer">
+                      
+                    <div class="left">
+                      <h2>Sites Links</h2>
+                      <ul>
+                        <li><a href="./Index.html">Home</a></li>
+                        <li><a href="./Development/HTML/blog.html">Blog</a></li>
+                        <li><a href="./Development/HTML/product.html">Products</a></li>
+                        <li><a href="./Development/HTML/research.html">Research</a></li>
+                      </ul>                       
+                    </div>
+        
+                    <div class="center">
+                      <h2>Assitance</h2>
+                      <ul>
+                        <li><a href="./Development/HTML/About.html">Portfolio</a></li>
+                        <li><a href="./Development/HTML/blog.html">Blog</a></li>
+                        <li><a href="#">Best Collections</a></li>
+                        
+                                            
+                    </div>
+        
+                    <div class="news">
+                      <h2>Subscribe To Our Newsletter!</h2>
+                      <form name="newsForm" onsubmit="displaypopup(event)"> 
+                      <ul>
+                          
+                        <li><input type="text" placeholder="Enter Your Email"></li>
+                        <li><button>Subscribe</button></li>
+        
+        
+                    </div>
+                    <div class="right"> 
+                      <h2>Follow Us On</h2>
+                      <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                      </ul>
+                    </div>
+                  
+        
+                  </div>
+                </div>
+                <div class="hr">
+                <hr>
+                <p style="background-color: #2b2828;">© 2021 Aeternam Watches. All Rights Reserved.</p>
+              </div>
+                  
+                </div>
+            </footer>
+           <script src="./Development/Ext_JS/footer.js"></script> <!--External Javascript file for footer-->
+          </body>
+</html>
+
