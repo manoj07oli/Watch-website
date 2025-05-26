@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">   <!--meta charset to define the character set for the HTML document.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--meta name="viewport" to make the website responsive on all devices.-->
+  <title>Document</title>
+</head>
+<style>
+
+
+ *{                            /*universal selector to select all elements in the document.*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+
+
+ body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+ }
+  
+
+
+
+header{                         /*header is used to define a header for a document or a section.*/
+  display: flex;
+  justify-content: space-between;
+  background: tansparent;
+  background-color: rgb(0, 0, 0);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 9;
+   
+    height: 110px;
+    overflow: hidden;
+
+  position: fixed;
+}
+
+
+.navbar { 
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 9;
+  
+}
+
+.logo img{
+  width: 63px;
+  margin-top: -23px;
+  left: 48%;
+  position: absolute;
+  max-height: 70px
+}
+
+.Overlay{
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    text-align: left;
+    color: rgb(249, 243, 243);
+    font-size: 100%;
+}
+.Overlay image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+
+.navbar ul{
+    display:flex ;
+    justify-content: left;
+    align-items: left;
+     
+}
+
+.navbar ul li {
+    margin: 0 23px;
+    text-align: center;
+    list-style: none;
+    
+    
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+    
+}
+
+.navbar ul li a:hover {
+    color: #283493;
+}
+
+
+
+.contact-btn .btn{
+    background-color: rgb(255, 252, 252);
+    color: black;
+    font-weight: 200;
+    padding: 4px 9px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-right: 30px;
+    align-items:flex-end;
+}
+
+.contact-btn .btn:hover{
+    background-color: aquamarine;
+}
+ 
+  
+ 
+ 
+  .main { 
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    
+    height: 300px;
+    flex-direction: column;
+    margin-bottom: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+    
+   
+    
+  } 
+  button {
+    background-color: #f6f0f0;
+    color: rgb(10, 10, 10);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top:20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.image-container img {
+  
+  position:center;
+    height: 80%;
+    width: 50%;
+    inset: 0px;
+    color: transparent;
+}
+.aboutus img {
+  position:center;
+    height: 80%;
+    width: 50%;
+    inset: 0px;
+    color: transparent;
+}
+.contactus img {
+  position:center;
+    height: 80%;
+    width: 50%;
+    inset: 0px;
+    color: transparent;
+}
+.homepage img {
+  position:center;
+    height: 80%;
+    width: 50%;
+    inset: 0px;
+    color: transparent;
+}
+.Products img {
+  position:center;
+    height: 80%;
+    width: 50%;
+    inset: 0px;
+    color: transparent;
+}
+      
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.main-footer {
+  display: flex;
+      justify-content: space-between;
+      width: 132%;
+      position: relative;
+      max-width: 1200px;
+      left: -15%;
+}
+
+.main-footer div {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.news input {
+    width: 200px;
+    padding: 8px;
+    border: none;
+}
+
+.news button {
+    padding: 8px 15px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hr {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+  position:center;
+    height: 80%;
+    width: 50%;
+    inset: 0px;
+    color: transparent;
+}
+</style>
+<body>
+  <section>                <!--section tag for page-->
+    <nav>
+    <header class="header">
+        <div class="navbar">    <!--navbar class for navigation bar-->
+    
+            <ul>
+            <li><a href="../HTML/blog.html"><B>Blog</B></a></li>
+            <li><a href="../HTML/product.html"><B>Products</B></a></li>
+            <li><a href="../HTML/research.html"><B>Research</B></a></li>
+            <li><a href="../HTML/About.html"><B>About Us</B></a></li>
+            </ul>
+        </div>
+
+        <div class="logo">            <!--logo class for logo of the page-->
+          <a href="/Index.html">
+                <img src="/Development/IMAGES/logo_1(1)(1).png" alt="logo">
+            </div>
+          </a>
+
+          
+         <div class="contact-btn">
+         
+            <a href="./Contact.html" class="btn">Get In Touch</a>
+        
+         </div>
+        </nav>
+
+
+    </header>
+    </section>
+      <div class="main">    <!--main class for main content of the page-->
+        <h1>RESEARCH</h1>
+        <p>We believe our research will eventually lead to</p>
+          <p>general puropse</span>to use for consumers.</p>
+         <p>Building a watch that can be used for eternal purposes.</p>
+        </p>
+      </div>
+      <div class="image-container">
+        <h1>References</h1>
+        <h4>Navbar</h4>. 
+        <img src="../IMAGES/1.webp" alt="logo" > <br> <img src="../IMAGES/2.png" alt="logo" >
+        <h3>Navbar:</h3>
+        <p>Our Navbar was taken references from <a href="https://www.rolex.com/en-us" >Rolex</a>. Rolex has navbar with green color but we focus on black color on navbar which makes it attractive.</p>   <br>
+      </div>
+      
+
+      <div class="aboutus">
+        <h1>About us</h1>
+        <img src="../IMAGES/about1.png" alt="logo" > <img src="../IMAGES/about.png" alt="logo" >
+        <h3>About us:</h3>
+        <p>Our About us was taken references from <a href="https://authlab.io/about/" >Authlab</a>. Authlab has images and text in column but we focus on row with circle images.   </p><br>
+
+      </div>
+      <div class="contactus">
+        <h1>Contact us</h1>
+        <img src="../IMAGES/Contactus.png" alt="logo" > <img src="../IMAGES/contact.png" alt="logo" >
+        <h3>Contact us:</h3>
+        <p>Our Contact us was taken references from <a href="https://ingskill.com/contact" >Ing skill Academy</a>. Ing skill academy has background colour with #450238 and we focused on solid black which looks great.</p><br>
+      </div>
+
+      <div class="homepage">
+        <h1>Homepage</h1>
+      <img src="../IMAGES/homepage.webp" alt="logo" > <img src="../IMAGES/Rolex.png" alt="logo" >
+      <h3>Homepage:</h3>
+      <p>Our Homepage was taken references from <a href="https://www.rolex.com/en-us " >Rolex</a>. Rolex has homepage with video and  we also focus on video.</p><br>
+      </div>
+      <div class="Products">
+        <h1>Products</h1>
+        <img src="../IMAGES/product1.webp" alt="logo" > <img src="../IMAGES/product.webp" alt="logo" >
+        <h3>Products:</h3>
+        <p>Our Products was taken references from <a href="https://www.blancpain.com/en" >BLANCPAIN</a>. Omeha has products with white background and we mostly focus on white background image.</p>
+      </div>
+      <div class="text"><br>
+        <h1>Our Research</h1>
+        <p>Our research is based on the idea of creating a watch that can be used for eternal purposes.</p>
+        <p> We believe our research will eventually lead to general puropse to use for consumers</p>
+      </div><br>
+         
+      <hr>
+
+      <footer class="footer"> <!--Home page footer-->
+        <div class="footerc">
+          
+            <div class="main-footer">
+                  
+                <div class="left">
+                  <h2>Sites Links</h2>
+                  <ul>
+                    <li><a href="/Index.html">Home</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./product.html">Products</a></li>
+                    <li><a href="./research.html">Research</a></li>
+                  </ul>                       
+                </div>
+    
+                <div class="center">
+                  <h2>Assitance</h2>
+                  <ul>
+                    <li><a href="./About.html">Portfolio</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="#">Best Collections</a></li>
+                    
+                                        
+                </div>
+    
+                <div class="news">
+                  <h2>Subscribe To Our Newsletter!</h2>
+                  <form name="newsForm" onsubmit="displaypopup(event)"> 
+                  <ul>
+                      
+                    <li><input type="text" placeholder="Enter Your Email"></li>
+                    <li><button>Subscribe</button></li>
+    
+    
+                </div>
+                <div class="right"> 
+                  <h2>Follow Us On</h2>
+                  <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                  </ul>
+                </div>
+              
+    
+              </div>
+            </div>
+            <div class="hr">
+            <hr>
+            <p style="background-color: #2b2828;">© 2021 Aeternam Watches. All Rights Reserved.</p>
+          </div>
+              
+            </div>
+        </footer>
+       <script src="/Development/Ext_JS/footer.js"></script> <!--External Javascript file for footer-->
+</body>
+</html>

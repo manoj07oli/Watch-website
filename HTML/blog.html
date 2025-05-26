@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AETERNAM - Watch Ecommerce Blog</title>
+    <style>
+*{      /* Universal Selector */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  margin-top: -100px;
+}
+
+.logo img{
+    width: 63px;
+    margin-top: -23px;
+    left: 48%;
+    position: absolute;
+    max-height: 70px;
+}
+
+.navbar{
+    display:flex;
+    gap: 20px;
+    margin-right: auto;
+    justify-content: space-between;
+    
+}
+.navbar ul{
+    display:flex  
+}
+
+.navbar ul li {
+    margin: 0 23px;
+    text-align: center;
+    list-style: none;
+    
+    
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+    
+}
+
+.navbar ul li a:hover {
+    color: #facc25;
+}
+
+
+
+.contact-btn .btn{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 4px 9px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-right: 30px;
+    align-items:flex-end;
+
+}
+
+.contact-btn .btn:hover{
+    background-color: #facc25
+}
+
+
+.body{
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+
+.blog-content{
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgb(35, 35, 35);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    z-index: 1000;
+}
+
+.blog-content2{
+    position: absolute;
+    overflow: hidden;
+    
+}
+
+.blog-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    color: azure;
+    background-color: rgba(0, 0, 0, 0.5) ;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.blogdetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Flex wrap to wrap the elements */
+}
+
+.blogimage1 img{
+    max-width: 32%;
+    max-height: 64%;
+    overflow: hidden; /* Overflow to define the overflow behaviour of the element */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: absolute; /* Position to define the position of the element */
+    right: 2%;
+    right: 2%;
+    bottom: 30%;
+    opacity: 0.9;  /* Opacity to define the transparency of the element */
+}
+
+.blogimage1-1 img{
+
+    max-width: 32%;
+    max-height: 64%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    right: 2%;
+    bottom: -50px;
+    width: 32%;
+    height: 35%;
+}
+
+.blogimage2 img{
+    display: flex;
+    max-width: 29%;
+    max-height: 38%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 3%;
+    bottom: -67%;
+}
+
+.blogimage3 img{
+    display: flex;
+    max-width: 35%;
+    max-height: 40%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 63%;
+    bottom: -117%;
+}
+.bloginfo{
+    padding-top: 30px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;    
+    padding: 30px;
+    margin-right: 485px;
+}
+
+.bloginfo2{
+    padding-top: 4%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 30px;
+    margin-left: 485px;
+    z-index: 1000;
+    position: absolute;  
+    text-align: justify;  
+}
+
+.bloginfo3{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding: 30px;
+    margin-top: 355px;
+    margin-right: 481px;
+    z-index: 1000;
+    position: absolute;
+    padding-right: 130px;
+    bottom: -875px;
+    text-align: justify;
+}
+ 
+.form{     /* Form styling */
+    margin-top: 720px;  
+    background-color: antiquewhite;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.main-footer {
+  display: flex;
+      justify-content: space-between;
+      width: 132%;
+      position: relative;
+      max-width: 1200px;
+      left: -15%;
+}
+
+.main-footer div {
+    flex: 1;
+    text-align: left;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.news input {
+    width: 200px;
+    padding: 8px;
+    border: none;
+}
+
+.news button {
+    padding: 8px 15px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hr {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+    </style>
+</head>   <!-- Section for the header -->
+<body class="body">  <!-- Navigation bar -->
+        <section>
+            <nav>
+                <header class="header">
+                    <div class="navbar">
+                
+                        <ul>
+                            <div class="forblog">
+                        <li><a href="../HTML/blog.html"><B>BLOG</B></a></li>
+                        </div>
+                        <li><a href="../HTML/product.html"><B>Products</B></a></li>
+                        <li><a href="../HTML/research.html"><B>Research</B></a></li>
+                        <li><a href="../HTML/About.html"><B>About Us</B></a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="logo">
+                        <a href="/Index.html">
+                            <img src="../IMAGES/logo_1(1)(1).png" alt="logo">
+                        </div>
+                        </a>
+                     <div class="contact-btn">
+                     
+                        <a href="../HTML/Contact.html" class="btn">Get In Touch</a>
+                    
+                     </div>
+                </nav>
+                </header>
+            
+        </section>
+        
+        <!-- Blog Section -->
+        <section class="blog">  <!--First Blog content-->
+            <div class="blogimage1">
+                <img src="../IMAGES/technology.png" alt="blog1">
+            </div>
+
+            <div class="blogimage1-1">
+                <img src="../IMAGES/interior.png" alt="blog1">
+            </div>
+            
+            <div class="blog-content">
+                <div class="blog-title">
+                    <h1>Discover our latest news</h1>
+                </div>
+
+             <div class="blogdetails">
+                <div class="bloginfo">
+                    
+                    <h3 style="color: rgb(255, 255, 255);">Technology's Effect on the Watch Industry</h3><br>
+                    <p style="color: rgb(255, 255, 255);text-align: justify;"> As technology has advanced , the watch industry has experienced significant change.
+                        One of the most prominent development is the emergence of smartwatches. In constrant to conventional timepieces, smartwatches can execute many functions furtheron just telling time, including monitoring fitness activities,
+                         receiving notifications and even making phone calls. This has posed a challenge to traditional watch manufacturers, as buyers now have a wider array of wrist-worn devices option to consider. 
+                         <br> <br>
+                         The art of watchmaking has evolved significantly since its early origins.Many <b style="color: #facc25;">Positive Impacts</b></style> have been made in terms of watch industry. 
+                         The rise of digital technology initiated a remarkable transformation, leading to the introduction of quartz watches that provides exceptional precision and dependability. As a technological step to the watch industry, the smart watches of the present not only helps in timekeeping,
+                         but also in various features like gps tracking, health tracking, etc. Many people are choosing smartwaches due to their features, design and affordability. As a result these technologies have faciliated the growth of microbrands and independents watchmakers, who can more readily 
+                         and economically realize their innovative designs.
+
+                         <br><br>
+                         The true revolution, however, occured with the launch of smartwaches. Brands such as Apple, Samsung, and Garmin have expanded the possibilities of what a watch can accompolish but
+                         these gadgets serve not merely as timepieces, they works as compact computers located on your wrist, capable of tracking fitness activities, and making phone calls. 
+                         
+                         <br><br>
+                         As there are positive imapcts on technology for watches, there are various <b style="color: #facc25;">Negetive Impacts</b></style> to watch industry caused by technological advancements. Due to creation of such smart watches the true concept of a wrist watch is degrading more and more. Like said before,
+                          such gadgets dont serve as elegant time pieces but rather simply are a small computer compacted on your wrists. Because of this, various controversies have been created among watch enthusiasts resultiing in conflicts in the tradition of watches. Some people favour traditional
+                          watches as smart watches have various problems like Cost of maintainance, battery limitations and even environmental impacts.
+
+                    </p>
+            </div>
+            </section>                
+<section>
+
+                <div class="blogimage2"> <!--Second Blog Content-->
+                    <img src="../IMAGES/forlblog.jpg" alt="blog2">
+                </div>
+                 <div class="bloginfo2">
+                    <h3 style="color:rgb(0, 0, 0);">Technology's advancements on watch design and sales </h3><br>
+              
+                <p> In this 21st century, one of the most significant developments in the realm of luxury watchmaking is the use of cutting-edge materials. Previously, when traditional timepieces were made form gold, platinium, or stainless steel, 
+                    watches have adopted materials such as carbon, ceramic, and titanium.These alternatives are not only lighter and more resilient but also provide fresh aesthetic options. Various brands like Tissot, Hublot, Richard Mille,etc are the forefront of this movements,
+                    utilizing advanced materials.  <br><br>
+                    
+                    The watches of the present have been demanded in the huge world of digitalization as well. Many digital brands and companies have started to produce digital watches or smartwatches which not only helps for timekeeping but also for various purposes from health tracking to making calls.
+                    Companies like apple, samsung, etc have been utilizing such methods. It is helping people on being more productive in their daily lives. Such advancements of the technology had provided various efficient and accurate advantages and its simplicity is liked by many people. Therefore, the
+                    technological advancements has helped to increase the sales in the watch industry.
+                 </p> 
+                </div>
+            </div>
+
+            <div class="blogimage3"> <!--Third Blog Content-->
+                <img src="../IMAGES/-1x-1.png" alt="blog3">
+            </div>
+            <div class="bloginfo3">
+                <h3 style="color:rgb(0, 0, 0);"> The Outcome</h3><br>
+                <p> <b style="color: #c25;"> We can conclude </b></style>by saying that the digital watches in the present world have been a huge success. Many people are favouring digital watches due to various and efficient features present in them.
+                    Digital watches are using quartz movements and other technical mechanisms to provide accurate timekeeping. Moreover, they are using LCD,LED and various advance displays to show time. Due to their sleek and efficient design, many companies regarding sports are partnering with such companies 
+                    and attracting many people to encourage them in fitness activities as well.<br><br> Similarly, the watches are providing various gps features as well. This is helping people to track their locations as well as guiding them to their preferred destinations.
+                    The advent of digital technology has revolutionized the watch industry, leading to the creation of quartz watches known for their exceptional accuracy and reliability. Modern smartwatches have further advanced the industry by offering features beyond timekeeping, such as GPS tracking and health monitoring. 
+                    These smartwatches are popular for their functionality, design, and affordability. Consequently, this technological progress has enabled the rise of microbrands and independent watchmakers, allowing them to bring their innovative designs to market more easily and cost-effectively.
+                            </p>
+                          </div>
+                  <br><br>
+                
+               
+            </div>
+
+
+
+        </section>
+           
+
+        
+    </div>
+
+     <div class="form">
+      <footer class="footer"> <!-- page footer-->
+        <div class="footerc">
+          
+            <div class="main-footer">
+                  
+                <div class="left">
+                  <h2>Sites Links</h2>
+                  <ul>
+                    <li><a href="/Index.html">Home</a></li>
+                    <li><a href="/Development/HTML/blog.html">Blog</a></li>
+                    <li><a href="/Development/HTML/product.html">Products</a></li>
+                    <li><a href="/Development/HTML/research.html">Research</a></li>
+                  </ul>                       
+                </div>
+    
+                <div class="center">
+                  <h2>Assitance</h2>
+                  <ul>
+                    <li><a href="/Development/HTML/About.html">Portfolio</a></li>
+                    <li><a href="/Development/HTML/blog.html">Blog</a></li>
+                    <li><a href="#">Best Collections</a></li>
+                    
+                                        
+                </div>
+    
+                <div class="news">
+                  <h2>Subscribe To Our Newsletter!</h2>
+                  <form name="newsForm" onsubmit="displaypopup(event)"> <!--JS submit pop up response-->
+                  <ul>
+                      
+                    <li><input type="text" placeholder="Enter Your Email"></li>
+                    <li><button>Subscribe</button></li>
+    
+    
+                </div>
+                <div class="right"> 
+                  <h2>Follow Us On</h2>
+                  <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                  </ul>
+                </div>
+              
+    
+              </div>
+            </div>
+            <div class="hr">
+            <hr>
+            <p style="background-color: #2b2828;">© 2021 Aeternam Watches. All Rights Reserved.</p>
+          </div>
+              
+            </div>
+        </footer>
+       <script src="/Development/Ext_JS/footer.js"></script> <!--External Javascript file for footer-->
+</body>
+</html>
